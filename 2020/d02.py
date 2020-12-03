@@ -2,7 +2,7 @@ import re
 
 
 def read_input():
-    with open("d02_input.txt") as f:
+    with open("inputs/d02.txt") as f:
         return f.readlines()
 
 
