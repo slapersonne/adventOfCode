@@ -18,6 +18,7 @@ from d17 import run_17a, run_17b
 from d18 import run_18a, run_18b
 from d19 import run_19a, run_19b
 from d20 import run_20a
+from d22 import run_22a
 
 if __name__ == "__main__":
-    run_20a()
+    run_22a()
