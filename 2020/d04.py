@@ -38,8 +38,7 @@ def validate_fields(fields):
         return False
 
     height = fields["hgt"]
-    hgt_rgxp = r"(\d+)(cm|in)"
-    hgt_match = re.match(hgt_rgxp, height)
+    hgt_match = re.match(r"^(\d+)(cm|in)$", height)
     if not hgt_match:
         return False
     else:
@@ -52,7 +51,7 @@ def validate_fields(fields):
             return False
 
     hair_color = fields["hcl"]
-    if not re.match(r"#[\da-f]{6}", hair_color):
+    if not re.match(r"^#[\da-f]{6}$", hair_color):
         return False
 
     eye_color = fields["ecl"]
@@ -60,7 +59,7 @@ def validate_fields(fields):
         return False
 
     passport_id = fields["pid"]
-    if not re.match(r"\d{9}", passport_id):
+    if not re.match(r"^\d{9}$", passport_id):
         return False
 
     return True
@@ -68,7 +67,7 @@ def validate_fields(fields):
 
 def run_04():
     with open("inputs/d04.txt") as f:
-        lines = [line[:-1] for line in f.readlines()]
+        lines = [line.strip() for line in f.readlines()]
     passports = parse_passports(lines)
     valid_passports = [passport for passport in passports if validate(passport, True)]
     print(len(valid_passports))
