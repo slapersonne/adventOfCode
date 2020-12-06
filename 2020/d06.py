@@ -15,8 +15,8 @@ def parse_forms(lines, join_operation):
 def run_06():
     with open("inputs/d06.txt") as f:
         lines = [line.strip() for line in f.readlines()]
-    count_1 = parse_forms(lines, lambda a, b: a | b)
+    count_1 = parse_forms(lines, set.union)
     print(count_1)
-    count_2 = parse_forms(lines, lambda a, b: a & b)
+    count_2 = parse_forms(lines, set.intersection)
     print(count_2)
     return
