@@ -5,6 +5,7 @@ from d04 import run_04
 from d05 import run_05
 from d06 import run_06
 from d07 import run_07a, run_07b
+from d08 import run_08a, run_08b
 
 if __name__ == "__main__":
-    run_07b()
+    run_08b()
