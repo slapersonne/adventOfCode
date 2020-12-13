@@ -22,4 +22,4 @@ from d22 import run_22a
 from d24 import run_24a
 
 if __name__ == "__main__":
-    run_24a()
+    run_10a()
