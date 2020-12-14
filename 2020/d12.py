@@ -47,7 +47,7 @@ def run_12b():
             wx -= value
         elif order == "S":
             wy -= value
-        elif order in ["L", "R"]:
+        elif order in "LR":
             if order == "L":
                 value = (360 - value) % 360
             else:
