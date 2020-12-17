@@ -45,11 +45,11 @@ def run_16b():
         for i in range(len(my_ticket)):
             if all(map(lambda v: rule.is_valid(v), [t[i] for t in nearby_tickets])):
                 rules_candidates[rule.name].append(i)
+    rules_mappings, used_indexes = dict(), set()
     sorted_keys = sorted(rules_candidates, key=lambda r: len(rules_candidates[r]))
-    rules_mappings, used_indexes = dict(), list()
     for key in sorted_keys:
         index = [i for i in rules_candidates[key] if i not in used_indexes][0]
-        used_indexes.append(index)
+        used_indexes.add(index)
         rules_mappings[key] = index
     selected_keys = [key for key in sorted_keys if key.startswith("departure")]
     selected_indexes = [rules_mappings[k] for k in selected_keys]

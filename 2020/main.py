@@ -14,6 +14,7 @@ from d13 import run_13a, run_13b
 from d14 import run_14a, run_14b
 from d15 import run_15a, run_15b
 from d16 import run_16a, run_16b
+from d17 import run_17a, run_17b
 
 if __name__ == "__main__":
-    run_16b()
+    run_17b()
